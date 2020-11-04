@@ -1,0 +1,184 @@
+<html>
+    <head>
+        <title>
+            Song Play Help By JavaScript
+        </title>
+
+
+    </head>
+    <script src="js/style.js" async ></script>
+        <link rel="stylesheet" href="css/style.css">
+       
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <body>
+
+        <div class="container">
+        
+            <div class="col-sm-12">
+                    <div class="header">
+                <h2 style="text-align: center">Play to Lisn music</h2>
+            </div>
+        </div>
+
+
+             
+                  
+                                    <div class="col-sm-3">
+                                         
+                        <img class="pic" id="pic2" alt="badshah" src="images/badshah.jpg">  
+                    
+                        </div>
+                            <div class="col-sm-3">
+                                   
+                            <img class="pic"id="pic3"alt="bohemia" src="images/bohemia.jpg">
+                        
+                        </div>
+                            <div class="col-sm-3">
+                                    
+                            <img class="pic " id="pic4"alt="raftaar" src="images/raftaar.jpg">
+                     
+                        </div>
+                            <div class="col-sm-3">
+                                   
+                            <img class="pic " id="pic5"alt="ninja" src="images/ninja.jpg ">
+               
+                        </div>
+                        
+        
+                
+                    
+                
+                            <div class="col-sm-3">
+                                    <div class="pic">
+                <img class="pic "alt="akhil" src="images/akhil.jpg">  
+            </div>  
+                </div>
+                    <div class="col-sm-3">
+                            <div class="pic">
+                    <img class="pic " alt="hardy" src="images/hardy.jpg">
+                </div>
+                </div>
+                    <div class="col-sm-3">
+                            <div class="pic">
+                    <img class="pic " alt="jasdeep" src="images/jasdeep.jpg">
+                </div>
+                </div>
+                    <div class="col-sm-3">
+                            <div class="pic">
+                    <img class="pic " alt="jass" src="images/jass manak.jpg">
+                </div>
+                </div>
+                
+
+                
+            
+        
+   
+
+
+
+      <script>
+        
+        var gettingclass  = document.getElementsByClassName('pic')
+       
+     
+        for(var i =0 ; i<gettingclass.length ; i++)
+        {
+            
+     document.querySelectorAll('.pic')[i].addEventListener('click',start)
+
+     document.querySelectorAll('.pic')[i].addEventListener('dblclick',stop)
+            
+
+        }
+
+  
+
+
+
+        var audio =new Audio('badshah.mp3')
+            var audio2 =new Audio('bohemia.mp3')
+            var audio3 =new Audio('raftaar.mp3')
+            var audio4 =new Audio('ninja.mp3')
+
+        
+
+ function stop(){
+   
+  
+
+            var artist =this.alt
+           switch (artist){
+               case "badshah":
+               audio.pause()
+               break;
+
+               case "bohemia":
+               audio2.pause()
+               break;
+
+               case "raftaar":
+               audio3.pause()
+               break;
+
+               case "ninja":
+               audio4.pause()
+               break;
+
+               default:
+               console.log("wrong input")
+               break;
+ }
+ 
+ }
+
+
+
+
+     function start(){ 
+      
+        var x = document.getElementById("myAudio"); 
+
+            var artist =this.alt
+           switch (artist){
+               case "badshah":
+               audio.play()
+               break;
+
+               case "bohemia":
+               audio2.play()
+               break;
+
+               case "raftaar":
+               audio3.play()
+               break;
+
+               case "ninja":
+               audio4.play()
+               break;
+
+               default:
+               console.log("wrong input")
+               break;
+               }
+     }
+
+      
+
+     
+       
+        
+        
+        </script>
+
+    </body>
+
+
+</html>
